@@ -1,0 +1,29 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Memory capture
+*.mdb
+*.mdb.meta
+
+# Asset meta files should be tracked
+# *.meta is NOT ignored
