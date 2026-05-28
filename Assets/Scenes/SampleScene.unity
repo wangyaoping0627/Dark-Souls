@@ -231,7 +231,6 @@ GameObject:
   - component: {fileID: 938997326}
   - component: {fileID: 938997327}
   - component: {fileID: 938997328}
-  - component: {fileID: 938997329}
   - component: {fileID: 938997330}
   m_Layer: 0
   m_Name: Player
@@ -366,7 +365,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.211
-  m_Speed: 5
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -391,27 +390,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nav: {fileID: 938997327}
---- !u!95 &938997329
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938997321}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e4b5668e03f7cd34e9aab362c76210b5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &938997330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,8 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c11f6428d19274f972cd2bcd1403b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 938997329}
-  rb: {fileID: 938997326}
+  anim: {fileID: 1795900303}
+  nav: {fileID: 938997327}
+  isMoving: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +515,11 @@ MonoBehaviour:
 --- !u!4 &1795900302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8060543490346059806, guid: 6f48730fe961f8947a4641c918f8aeef, type: 3}
+  m_PrefabInstance: {fileID: 3856909706978055987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1795900303 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 623391472250725133, guid: 6f48730fe961f8947a4641c918f8aeef, type: 3}
   m_PrefabInstance: {fileID: 3856909706978055987}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &178985767719209927

@@ -2,37 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerAnimController : MonoBehaviour
 {
     public Animator anim;
-    public Rigidbody rb;
+    public NavMeshAgent nav;
 
-    private bool isStanding;
-    private bool isMoving;
+    public bool isMoving = false;
     void Start()
     {
-        isStanding = true;
-        isMoving = false;
+  
     }
     void Update()
     {
-        if (rb.velocity.magnitude != 0)
+        if(nav != null && anim != null)
         {
-            isMoving = true;
-            isStanding = false;
-        }
-        else
+        if (nav.velocity.magnitude==0)
         {
             isMoving = false;
-            isStanding = true; 
         }
+        else if (nav.velocity.magnitude!=0)
+        {
+            isMoving = true;
+        }   
         ToAnimator();
+        }
     }
 
     void ToAnimator()
     {
-        anim.SetBool("isStanding",isStanding);
+        
         anim.SetBool("isMoving",isMoving);
     }
 }
