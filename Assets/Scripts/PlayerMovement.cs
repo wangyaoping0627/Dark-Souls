@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     if (Input.GetMouseButtonDown(1)) // 1 = 右键
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        if (Physics.Raycast(ray, out RaycastHit hit)) 
         {
             
             target.transform.position = hit.point;
