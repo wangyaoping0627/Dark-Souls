@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     public NavMeshAgent nav;
-    public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +20,6 @@ public class PlayerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit)) 
         {
-            
-            target.transform.position = hit.point;
-            
             nav.SetDestination(hit.point);
         }
     }
