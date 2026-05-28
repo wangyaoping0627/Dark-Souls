@@ -11,7 +11,8 @@ public class PlayerCamera : MonoBehaviour
     {
         if(player != null)
         {
-            this.transform.position=player.position+offset;//得到相机位置
+            //得到相机位置
+            this.transform.position=player.position+offset;
         }
     }
 }
