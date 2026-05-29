@@ -4,18 +4,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerAnimController : MonoBehaviour
+public class AnimController : MonoBehaviour
 {
     public Animator anim;
     public NavMeshAgent nav;
-
     public bool isMoving = false;
     public bool isStanding = true;
    
+    void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+        nav = GetComponent<NavMeshAgent>(); 
+    }
     void Update()
     {
-        if(nav != null && anim != null)
+        if(nav == null && anim == null)
         {
+            Debug.Log("Nav/Anim is null");
+            return;  
+        }
         if (nav.velocity.magnitude==0)
         {
             isMoving = false;
@@ -28,7 +35,7 @@ public class PlayerAnimController : MonoBehaviour
             isStanding = false;
         }   
         ToAnimator();
-        }
+        
     }
 
     void ToAnimator() //传输到动画控制器

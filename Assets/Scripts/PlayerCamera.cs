@@ -21,7 +21,7 @@ public class PlayerCamera : MonoBehaviour
 
         if(player == null)
         {
-            print("Player is null");
+            Debug.Log("Player is null");
             return;
         } 
         
