@@ -21,7 +21,7 @@ public class PlayerCamera : MonoBehaviour
 
         if(player == null)
         {
-            print("角色为空");
+            print("Player is null");
             return;
         } 
         
