@@ -10,6 +10,7 @@ public class AnimController : MonoBehaviour
     public NavMeshAgent nav;
     public bool isMoving = false;
     public bool isStanding = true;
+    public bool isAttacking = false;
    
     void Start()
     {
@@ -42,5 +43,6 @@ public class AnimController : MonoBehaviour
     {
         anim.SetBool("isStanding",isStanding);
         anim.SetBool("isMoving",isMoving);
+        anim.SetBool("isAttacking",isAttacking);
     }
 }
